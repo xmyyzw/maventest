@@ -16,4 +16,9 @@ public class FirstService {
     public List<User> findUser(){
         return userMapper.selectByExampleWithBLOBs(null);
     }
+
+    public String findUserByID(int id){
+        User user = userMapper.selectByPrimaryKey(id);
+        return user.getPassword();
+    }
 }
