@@ -19,9 +19,6 @@ public class FirstController {
     public ModelAndView firstTest() {
         List<User> userList = firstService.findUser();
 
-//        for (User user: userList) {
-//            System.out.println(user);
-//        }
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("userList",userList);

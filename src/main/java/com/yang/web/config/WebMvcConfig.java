@@ -12,15 +12,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
-@EnableWebMvc
+//@EnableWebMvc
 @EnableTransactionManagement
 @Import(value = DruidDataSourceConfig.class)
-@ComponentScan(basePackages = "com.yang")
+@ComponentScan(basePackages = {"com.yang"})
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Bean
-    public InternalResourceViewResolver internalResourceViewResolver(){
-        InternalResourceViewResolver resolver= new InternalResourceViewResolver();
+    public InternalResourceViewResolver internalResourceViewResolver() {
+        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/WEB-INF/views");
         resolver.setSuffix(".jsp");
         return resolver;
