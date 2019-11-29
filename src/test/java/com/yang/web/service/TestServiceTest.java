@@ -21,6 +21,16 @@ public class TestServiceTest {
 
     @Test
     public void testUser() {
-        assertEquals("123456",firstService.findUserByID(1));
+        String s="ID:1->password:123456";
+        assertEquals(s,"123456", firstService.findUserByID(1));
     }
+
+    @Test
+    public void testUser2(){
+        String s = "ID:2->password:123";
+        assertEquals(s, "123", firstService.findUserByID(2));
+    }
+
+
+
 }
