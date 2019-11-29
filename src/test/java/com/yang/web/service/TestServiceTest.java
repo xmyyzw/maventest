@@ -28,7 +28,7 @@ public class TestServiceTest {
     @Test
     public void testUser2(){
         String s = "ID:2->password:123";
-        assertEquals(s, "123", firstService.findUserByID(2));
+        assertEquals(s, "123456", firstService.findUserByID(2));
     }
 
 
